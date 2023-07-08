@@ -3,6 +3,7 @@ import {
   Tab as ReactBootstrapTab,
   Tabs as ReactBootstrapTabs,
 } from 'react-bootstrap'
+import './style.css'
 
 function BeerList(props: BeerListProps) {
   const { id, tabs } = props
