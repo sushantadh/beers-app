@@ -1,0 +1,16 @@
+.nav {
+  --bs-nav-link-color: '#808080';
+  --bas-nav-link-padding-x: 0;
+  --bs-nav-link-color: var(--bs-gray-500);
+  --bs-nav-link-hover-color: var(--bs-gray-500);
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-width: 0;
+  font-weight: 700;
+}
+
+.nav-link {
+  padding: 0;
+  padding-right: var(--bs-nav-link-padding-x);
+}
