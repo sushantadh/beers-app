@@ -1,8 +1,14 @@
-import './App.css'
+import { Container } from 'react-bootstrap'
+import BeerList from './components/beerList'
+import useTabsData from './hooks/useTabsData'
 
 function App() {
+  const tabsData = useTabsData()
+
   return (
-    <h1 className='header'>Welcome To React-Bootstrap TypeScript Example</h1>
+    <Container className='mt-5'>
+      <BeerList id='beerList' tabs={tabsData} />
+    </Container>
   )
 }
 
