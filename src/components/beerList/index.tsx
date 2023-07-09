@@ -5,10 +5,10 @@ import {
 } from 'react-bootstrap'
 import './style.css'
 
-function BeerList(props: BeerListProps) {
-  const { id, tabs } = props
+function BeerTabs(props: BeerListProps) {
+  const { id, tabs, defaultIndex } = props
 
-  const [key, setKey] = useState(tabs[0]?.id || undefined)
+  const [key, setKey] = useState(defaultIndex || tabs[0]?.id || undefined)
 
   const setActiveTab = (active: string | undefined) => {
     setKey(active)
@@ -34,5 +34,6 @@ function BeerList(props: BeerListProps) {
 interface BeerListProps {
   id: string
   tabs: Array<{ id: string; title: string; component: JSX.Element }>
+  defaultIndex?: number
 }
-export default BeerList
+export default BeerTabs

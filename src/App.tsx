@@ -1,5 +1,5 @@
 import { Container } from 'react-bootstrap'
-import BeerList from './components/beerList'
+import BeerTabs from './components/beerList'
 import useTabsData from './hooks/useTabsData'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <Container className='mt-5'>
-      <BeerList id='beerList' tabs={tabsData} />
+      <BeerTabs id='beerTabs' tabs={tabsData} defaultIndex={0} />
     </Container>
   )
 }
