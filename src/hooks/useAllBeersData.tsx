@@ -33,6 +33,7 @@ export default (pageSize = 10) => {
           return {
             ...prev,
             data: [...prev.data, ...response.data],
+            page: prev?.page + 1,
             loading: false,
             error: null,
           }
