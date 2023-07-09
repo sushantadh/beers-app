@@ -1,11 +1,10 @@
 import useAllBeersData from '../../../hooks/useAllBeersData'
+import List from '../../../shareComponents/list'
 
 function AllBeers() {
   const { data, fetch } = useAllBeersData()
 
-  console.log('data', data)
-
-  return <div className='mt-2'>All beers</div>
+  return <List listData={data} onFetchMore={fetch} />
 }
 
 export default AllBeers
