@@ -19,8 +19,8 @@ function BeerTabs(props: BeerListProps) {
       id={id}
       activeKey={key}
       onSelect={(k) => setActiveTab(k || undefined)}
-      mountOnEnter={true}
-      unmountOnExit={true}
+      mountOnEnter={false}
+      unmountOnExit={false}
     >
       {tabs.map((item) => (
         <ReactBootstrapTab eventKey={item.id} title={item.title} key={item.id}>
