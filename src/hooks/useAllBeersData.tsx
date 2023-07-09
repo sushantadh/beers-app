@@ -23,9 +23,9 @@ export default (pageSize = 10) => {
     })
     const response = await fetchBeers({ page: beers?.page, pageSize: pageSize })
 
-    if (response?.statusCode !== 200) {
+    if (response && response?.statusCode !== 200) {
       setBeers((prev) => {
-        return { ...prev, loading: false, error: response.message }
+        return { ...prev, loading: false, error: response?.message }
       })
 
       if (response?.data?.length) {
