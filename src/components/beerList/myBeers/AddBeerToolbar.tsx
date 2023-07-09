@@ -4,7 +4,7 @@ function AddBeerToolbar(props: AddBeerProps) {
   const { onAddBeer } = props
   return (
     <Container className='mt-3 pl-0 d-flex justify-content-end'>
-      <Button type='button' variant='primary'>
+      <Button type='button' variant='primary' onClick={onAddBeer}>
         Add a new beer
       </Button>
     </Container>
