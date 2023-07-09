@@ -25,7 +25,7 @@ const List = (props: ListProps) => {
           </div>
         </div>
       ) : null}
-      {onFetchMore ? (
+      {onFetchMore && listData?.data.length ? (
         <div className='row mt-5 mb-5 d-flex'>
           {!listData?.loading ? (
             <button
