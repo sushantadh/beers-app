@@ -8,8 +8,10 @@ export default function ListItem(props: ItemProp) {
     <Card className='item-card'>
       <Card.Body className='d-flex flex-row align-items-center '>
         <img src={item?.image_url} alt={item.name} className='image' />
-        <div className='detail d-flex'>
-          <h5 className='item-name'>{item.name}</h5>
+        <div className='detail d-flex flex-column justify-content-start'>
+          <div className='item-name'>{item.name}</div>
+          <div className='tagline'>{item.tagline}</div>
+          <div className='description'>{item.description}</div>
         </div>
       </Card.Body>
     </Card>

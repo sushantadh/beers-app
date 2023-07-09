@@ -6,7 +6,7 @@ const List = (props: ListProps) => {
   const { listData, onFetchMore } = props
 
   return (
-    <Container className='mt-3'>
+    <Container className='mt-3 pl-0'>
       <Row>
         {listData.data.length
           ? listData?.data?.map((item) => (
