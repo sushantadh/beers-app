@@ -5,15 +5,18 @@ function ZeroState(props: ZeroStateProps) {
   const { onAddBeer } = props
   return (
     <Container className='mt-3 pl-0 zerostateContainer d-flex align-items-center justify-content-center'>
-      <span>Nothing to see yet.</span>
-      <Button
-        variant='link'
-        className='text-decoration-none fw-bolder'
-        onClick={onAddBeer}
-      >
-        Click here
-      </Button>
-      <span>to add your first beer</span>
+      <span className='d-flex flex-column align-items-center justify-content-center '>
+        <span>Nothing to see yet.</span>
+        <span>
+          <span
+            className='fw-bolder text-primary cursor-pointer pe-1'
+            onClick={onAddBeer}
+          >
+            Click here
+          </span>
+          to add your first beer!
+        </span>
+      </span>
     </Container>
   )
 }

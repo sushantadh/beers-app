@@ -13,4 +13,8 @@ code {
     monospace;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 @import 'bootstrap/dist/css/bootstrap.css';
