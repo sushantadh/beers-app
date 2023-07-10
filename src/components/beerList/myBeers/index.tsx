@@ -3,7 +3,7 @@ import useMyBeerData from '../../../hooks/useMyBeerData'
 import List from '../../../shareComponents/list'
 import AddBeerToolbar from './AddBeerToolbar'
 import ZeroState from './zeroState/ZeroStateView'
-import ModalComponent from '../../../shareComponents/Modal'
+import AddBeerFormModal from './AddBeerFormModal'
 
 const MyBeers = () => {
   const { data, addBeer } = useMyBeerData()
@@ -24,12 +24,15 @@ const MyBeers = () => {
       {data?.length ? (
         <List listData={{ data: data, page: 0, loading: false, error: null }} />
       ) : null}
-      <ModalComponent
+      <AddBeerFormModal
         show={openModal}
         onHide={hideModal}
+        handleFormsubmit={addBeer}
         modaltitle='Add New Beer'
-        modalbody={<div>Modal 1 body</div>}
         closebuttontext='submit'
+        cancelbutton='true'
+        cancelbuttontext='Cancel'
+        onCancel={hideModal}
       />
     </>
   )
