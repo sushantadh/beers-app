@@ -17,4 +17,19 @@ code {
   cursor: pointer;
 }
 
+.btn-primary {
+  border-radius: 0;
+}
+
+.btn-secondary {
+  border: 0;
+  background-color: transparent;
+  color: grey;
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  color: rgb(43, 43, 43);
+}
+
 @import 'bootstrap/dist/css/bootstrap.css';
