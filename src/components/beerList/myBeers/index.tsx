@@ -30,10 +30,6 @@ const MyBeers = () => {
         modaltitle='Add New Beer'
         modalbody={<div>Modal 1 body</div>}
         closebuttontext='submit'
-        closebutton={'true'}
-        cancelbutton='true'
-        onCancel={() => console.log('cancel button')}
-        cancelbuttontext='cancel'
       />
     </>
   )

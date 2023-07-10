@@ -16,9 +16,10 @@ function ModalComponent(props: ModalProps) {
       {...props}
       size='lg'
       aria-labelledby='contained-modal-title-vcenter'
+      className='rounded-0'
       centered
     >
-      <Modal.Header closeButton={Boolean(closebutton)}>
+      <Modal.Header closeButton={Boolean(closebutton)} className='border-0'>
         {modaltitle ? (
           <Modal.Title id='contained-modal-title-vcenter'>
             {modaltitle}
@@ -26,7 +27,7 @@ function ModalComponent(props: ModalProps) {
         ) : null}
       </Modal.Header>
       {modalbody ? <Modal.Body>{modalbody}</Modal.Body> : null}
-      <Modal.Footer>
+      <Modal.Footer className='border-0'>
         {Boolean(cancelbutton) && onCancel ? (
           <Button onClick={onCancel} variant='secondary'>
             {cancelbuttontext}

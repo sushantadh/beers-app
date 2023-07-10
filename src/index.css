@@ -32,4 +32,8 @@ code {
   color: rgb(43, 43, 43);
 }
 
+.modal-content {
+  border-radius: 0;
+}
+
 @import 'bootstrap/dist/css/bootstrap.css';
