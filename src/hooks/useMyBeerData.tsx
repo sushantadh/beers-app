@@ -12,5 +12,8 @@ export default () => {
     }
     setBeers([...beers, dataToAdd])
   }
-  return { data: beers, addBeer: addBeer }
+  return {
+    data: { data: beers, page: 0, loading: false, error: null },
+    addBeer: addBeer,
+  }
 }

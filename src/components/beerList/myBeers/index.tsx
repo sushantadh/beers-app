@@ -20,10 +20,8 @@ const MyBeers = () => {
   return (
     <>
       <AddBeerToolbar onAddBeer={onOpenModal} />
-      {!data?.length ? <ZeroState onAddBeer={onOpenModal} /> : null}
-      {data?.length ? (
-        <List listData={{ data: data, page: 0, loading: false, error: null }} />
-      ) : null}
+      {!data?.data.length ? <ZeroState onAddBeer={onOpenModal} /> : null}
+      {data?.data.length ? <List listData={data} /> : null}
       <AddBeerFormModal
         show={openModal}
         onHide={hideModal}
